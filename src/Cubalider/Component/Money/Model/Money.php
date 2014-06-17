@@ -5,7 +5,7 @@ namespace Cubalider\Component\Money\Model;
 /**
  * @author Yosmany Garcia <yosmanyga@gmail.com>
  */
-class Money implements MoneyInterface
+class Money
 {
     /**
      * @var float
@@ -13,15 +13,15 @@ class Money implements MoneyInterface
     private $amount;
 
     /**
-     * @var string
+     * @var Currency
      */
     private $currency;
 
     /**
      * @param float $amount
-     * @param string $currency
+     * @param Currency $currency
      */
-    function __construct($amount, $currency)
+    function __construct($amount, Currency $currency)
     {
         $this->amount = $amount;
         $this->currency = $currency;
@@ -36,7 +36,7 @@ class Money implements MoneyInterface
     }
 
     /**
-     * @return string
+     * @return Currency
      */
     public function getCurrency()
     {

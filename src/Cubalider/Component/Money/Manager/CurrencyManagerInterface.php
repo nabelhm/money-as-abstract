@@ -2,6 +2,8 @@
 
 namespace Cubalider\Component\Money\Manager;
 
+use Cubalider\Component\Money\Model\Currency;
+
 /**
  * @author Yosmany Garcia <yosmanyga@gmail.com>
  */
@@ -12,7 +14,7 @@ interface CurrencyManagerInterface
      *      
      * @api
      * @param mixed $criteria
-     * @return mixed The currency
+     * @return Currency The currency
      */
     public function pick($criteria);
 }

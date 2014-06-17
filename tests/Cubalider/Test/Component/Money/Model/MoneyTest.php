@@ -2,7 +2,7 @@
 
 namespace Cubalider\Test\Component\Money\Model;
 
-use Cubalider\Component\Money\Entity\Currency;
+use Cubalider\Component\Money\Model\Currency;
 use Cubalider\Component\Money\Model\Money;
 
 /**
@@ -17,10 +17,11 @@ class MoneyTest extends \PHPUnit_Framework_TestCase
      */
     public function testConstructorAndGetters()
     {
-        $amount = 1.1;
-        $currency = 'USD';
-        $money = new Money($amount, $currency);
-        $this->assertEquals(1.1, $money->getAmount());
+        $currency = new Currency();
+        $currency->setCode('USD');
+        $money = new Money(2, $currency);
+
+        $this->assertEquals(2, $money->getAmount());
         $this->assertEquals($currency, $money->getCurrency());
     }
 }
