@@ -17,8 +17,7 @@ class MoneyTest extends \PHPUnit_Framework_TestCase
      */
     public function testConstructorAndGetters()
     {
-        $currency = new Currency();
-        $currency->setCode('USD');
+        $currency = new Currency('USD', 'Dollar');
         $money = new Money(2, $currency);
 
         $this->assertEquals(2, $money->getAmount());

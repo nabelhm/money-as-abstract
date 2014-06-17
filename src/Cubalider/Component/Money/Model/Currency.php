@@ -19,10 +19,12 @@ class Currency
 
     /**
      * @param string $code
+     * @param string $name
      */
-    public function setCode($code)
+    function __construct($code, $name)
     {
         $this->code = $code;
+        $this->name = $name;
     }
 
     /**
@@ -31,14 +33,6 @@ class Currency
     public function getCode()
     {
         return $this->code;
-    }
-
-    /**
-     * @param string $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
     }
 
     /**
