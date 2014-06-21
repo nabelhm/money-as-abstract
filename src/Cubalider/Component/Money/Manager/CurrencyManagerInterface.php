@@ -10,6 +10,15 @@ use Cubalider\Component\Money\Model\Currency;
 interface CurrencyManagerInterface
 {
     /**
+     * Adds given currency.
+     *
+     * @api
+     * @param Currency $currency
+     * @return void
+     */
+    public function add(Currency $currency);
+
+    /**
      * Picks a currency using given criteria
      *      
      * @api
@@ -17,4 +26,21 @@ interface CurrencyManagerInterface
      * @return Currency The currency
      */
     public function pick($criteria);
+
+    /**
+     * Gets all currencies.
+     *
+     * @api
+     * @return Currency[]
+     */
+    public function collect();
+
+    /**
+     * Removes given currency.
+     *
+     * @api
+     * @param Currency $currency
+     * @return void
+     */
+    public function remove(Currency $currency);
 }
