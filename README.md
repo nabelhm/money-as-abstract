@@ -10,11 +10,17 @@ You need to create your manager implementing CurrencyManagerInterface.
 ```
 // $manager = new CurrencyManager();
 
-// Adds a currency
-$manager->add(new Currency('USD', 'United States Dollar'));
+// Adds currencies
+$currencies = include sprintf("%s/src/Cubalider/Component/Money/Resources/currencies.php", __DIR__);
+foreach ($currencies as $code => $name) {
+    $manager->add(new Currency($code, $name));
+}
 
-// Picks a currency
+// Picks a currency using a code
 $currency = $manager->pick('USD');
+
+// Picks a currency using an array of criteria
+$currency = $manager->pick(array('name' => 'Euro'));
 
 // Removes a currency
 $manager->remove($currency);
