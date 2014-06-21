@@ -5,7 +5,7 @@ This library provides an abstraction for money concepts.
 
 ## Currency Manager
 
-You need to create your manager implementing CurrencyManagerInterface.
+You need to create your manager implementing `CurrencyManagerInterface`.
 
 ```
 // $manager = new CurrencyManager();
