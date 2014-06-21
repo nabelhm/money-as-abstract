@@ -1,6 +1,6 @@
 {
     "name": "cubalider/money-as-abstract",
-    "description": "Provides an abstraction for money concepts",
+    "description": "This library provides an abstraction for money concepts",
     "type": "library",
     "keywords": ["money"],
     "license": "MIT",
