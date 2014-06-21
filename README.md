@@ -3,7 +3,7 @@ Cubalider Money As Abstract
 
 This library provides an abstraction for money concepts.
 
-# Currency Manager
+## Currency Manager
 
 You need to create your manager implementing CurrencyManagerInterface.
 
@@ -20,7 +20,7 @@ $currency = $manager->pick('USD');
 $manager->remove($currency);
 ```
 
-# Money
+## Money
 
 Money is useful for objects with price or money related properties.
 
