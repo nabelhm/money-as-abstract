@@ -4,10 +4,8 @@ Cubalider Money As Abstract
 This library provides an abstraction for money concepts.
 
 ```
-// $em is an already created entity manager
-
-// Creates the manager
-$manager = new CurrencyManager($em);
+// You need to implement your manager using CurrencyManagerInterface
+// $manager = new CurrencyManager();
 
 // Adds a currency
 $manager->add(new Currency('USD', 'United States Dollar'));
