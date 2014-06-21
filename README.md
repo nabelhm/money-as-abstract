@@ -24,6 +24,9 @@ $currency = $manager->pick(array('name' => 'Euro'));
 
 // Removes a currency
 $manager->remove($currency);
+
+// Collects currencies
+$currencies = $manager->collect();
 ```
 
 ## Money
