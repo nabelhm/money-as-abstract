@@ -19,10 +19,11 @@ interface CurrencyManagerInterface
     public function add(Currency $currency);
 
     /**
-     * Picks a currency using given criteria
+     * Picks a currency using given criteria.
+     * Criteria can be also a currency code.
      *      
      * @api
-     * @param mixed $criteria
+     * @param array|string $criteria
      * @return Currency The currency
      */
     public function pick($criteria);
