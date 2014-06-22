@@ -3,7 +3,7 @@ Cubalider Money As Abstract
 
 This library provides an abstraction for money concepts.
 
-## Currency Manager
+## Currency
 
 You need to create your manager implementing `CurrencyManagerInterface`.
 
@@ -16,11 +16,11 @@ foreach ($currencies as $code => $name) {
     $manager->add(new Currency($code, $name));
 }
 
-// Picks a currency using a code
-$currency = $manager->pick('USD');
-
 // Picks a currency using an array of criteria
-$currency = $manager->pick(array('name' => 'Euro'));
+$currency = $manager->pick(array('name' => 'USD'));
+
+// Picks a currency using a code directly
+$currency = $manager->pick('USD');
 
 // Removes a currency
 $manager->remove($currency);
