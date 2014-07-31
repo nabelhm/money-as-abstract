@@ -13,8 +13,8 @@ interface CurrencyManagerInterface
      * Adds given currency.
      *
      * @api
+     *
      * @param Currency $currency
-     * @return void
      */
     public function add(Currency $currency);
 
@@ -23,7 +23,9 @@ interface CurrencyManagerInterface
      * Criteria can be also a currency code.
      *      
      * @api
+     *
      * @param array|string $criteria
+     *
      * @return Currency The currency
      */
     public function pick($criteria);
@@ -32,6 +34,7 @@ interface CurrencyManagerInterface
      * Gets all currencies.
      *
      * @api
+     *
      * @return Currency[]
      */
     public function collect();
@@ -40,8 +43,8 @@ interface CurrencyManagerInterface
      * Removes given currency.
      *
      * @api
+     *
      * @param Currency $currency
-     * @return void
      */
     public function remove(Currency $currency);
 }
